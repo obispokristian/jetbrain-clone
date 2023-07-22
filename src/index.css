@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal{
+    position: relative;
+}
+
+.horizontal::before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    height: 1px;
+    width: 100%;
+    background: white;
+}
+
+.embla {
+    overflow: hidden;
+}
+.embla__container {
+    display: flex;
+}
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+@layer base{
+    .btn{
+        @apply px-4 py-2
+    }
+    .btn-language{
+        @apply px-4 py-2 text-black bg-white rounded-full
+    }
+    .btn-language:hover{
+        @apply bg-[#D4D4D5]
+    }
+    .navLink{
+        @apply text-[#7D7D7D] font-medium
+    }
+    .navLink:hover{
+        @apply text-white
+    }
+}
